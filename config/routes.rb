@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   resources :posts do
-    resources :comments
+    resources :comments, shallow: true
     root to: 'posts#index'
   end
 end
